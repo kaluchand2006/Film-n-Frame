@@ -106,7 +106,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  text-emphasis-color: transparent;
   font-weight: 700;
   font-size: 1.1rem;
   margin: 0.5rem 0 0.3rem 0;
