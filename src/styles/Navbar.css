@@ -1,0 +1,210 @@
+/* ===========================
+   Royal Luxury Navbar
+   =========================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(26, 26, 26, 0.55);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.13);
+  animation: fadeInDown 0.8s ease;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #bfa14b;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #f1e1a6;
+}
+
+/* Nav container */
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* Gold underline hover */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #bfa14b, #d6c38c);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #bfa14b;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.cta-btn {
+  background: linear-gradient(135deg, #bfa14b, #d6c38c);
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(191, 161, 75, 0.3);
+  letter-spacing: 0.5px;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(135deg, #d6c38c, #f1e1a6);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(191, 161, 75, 0.45);
+}
+
+/* Pulse animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 4px 12px rgba(191, 161, 75, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(191, 161, 75, 0.55);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(191, 161, 75, 0.3);
+  }
+}
+
+/* Navbar fade-in */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #bfa14b;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.98);
+    flex-direction: column;
+    padding: 25px;
+    gap: 18px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
+    border-top: 1px solid rgba(191, 161, 75, 0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+
+  .navbar-content.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-links li a {
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
