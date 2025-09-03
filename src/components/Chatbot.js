@@ -45,7 +45,10 @@ const Chatbot = () => {
       </button>
       {open && (
         <div className="chatbot-window">
-          <div className="chatbot-header">Virtual Producer</div>
+          <div className="chatbot-header">
+            Virtual Producer
+            <button className="chatbot-close" onClick={() => setOpen(false)} aria-label="Close chatbot">&times;</button>
+          </div>
           <div className="chatbot-messages">
             {messages.map((msg, i) => (
               <div key={i} className={`chatbot-msg ${msg.from}`}>{msg.text}</div>
