@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1 className="logo" onClick={() => scrollToSection("hero")}>
-        Flims n Frame
+        Flute n Frame
       </h1>
 
       {/* Hamburger Menu */}

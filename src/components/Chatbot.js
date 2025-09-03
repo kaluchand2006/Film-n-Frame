@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "../styles/Chatbot.css";
 
 const defaultMessages = [
-  { from: "bot", text: "👋 Welcome to Films n Frame! I'm your Virtual Producer. Ask me anything about our services, booking, or film production." }
+  { from: "bot", text: "👋 Welcome to Flute n Frame! I'm your Virtual Producer. Ask me anything about our services, booking, or film production." }
 ];
 
 const botReplies = [
