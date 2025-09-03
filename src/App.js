@@ -12,6 +12,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Showreel from "./components/Showreel";
 import DarkModeToggle from "./components/DarkModeToggle";
 import Chatbot from "./components/Chatbot";
+import Login from "./pages/Login"; // Import the Login component
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             }
           />
           <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/login" element={<Login />} /> {/* Add the Login route */}
         </Routes>
       </div>
     </Router>

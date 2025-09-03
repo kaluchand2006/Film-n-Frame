@@ -138,7 +138,7 @@
 .hero-bg-fallback {
   position: absolute;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  background: url('/Users/aashishchand/Desktop/website/Mama-website/image1.png') center center/cover no-repeat, #181828;
+  background: #181828;
   z-index: 1;
   filter: brightness(0.7) saturate(1.1);
 }
@@ -362,6 +362,11 @@
   100% { opacity: 1; transform: scale(1); }
 }
 
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(16px); }
+}
+
 @media (max-width: 700px) {
   .hero-title { font-size: 2.1rem; }
   .hero-tagline { font-size: 1.05rem; }
@@ -378,3 +383,6 @@
     font-size: 1rem;
   }
 }
+
+/* Font Awesome CDN for social icons (add to index.html if not present) */
+/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> */

@@ -26,6 +26,7 @@ const About = () => {
     if (type === 'Creative Excellence') navigate('/project/1');
     else if (type === 'Technical Mastery') navigate('/project/2');
     else if (type === 'Global Reach') navigate('/project/3');
+    else if (type === 'Client Satisfaction') navigate('/project/4');
   };
 
   return (
@@ -58,11 +59,17 @@ const About = () => {
                 icon: '🌍',
                 title: 'Global Reach',
                 desc: 'Connecting audiences beyond every border.'
+              },
+              {
+                type: 'Client Satisfaction',
+                icon: '⭐',
+                title: 'Client Satisfaction',
+                desc: 'Delivering happiness and exceeding expectations.'
               }
             ].map((h, i) => (
               <div
                 key={h.type}
-                className={`highlight-box clickable highlight-glass${i === 1 ? ' pulse' : ''}`}
+                className={`highlight-box clickable highlight-glass pulse`}
                 onClick={() => handleHighlightClick(h.type)}
                 tabIndex={0}
                 role="button"

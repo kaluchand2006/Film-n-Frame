@@ -46,7 +46,7 @@ const Projects = () => {
         <div className="project-grid">
           {projects.map(project => (
             <Link to={`/project/${project.id}`} key={project.id} className="project-card-link">
-              <div className="project-card">
+              <div className="project-card pulse">
                 <div className="project-image">
                   <div className="project-placeholder">
                     <span className="project-category">{project.category}</span>
@@ -59,6 +59,7 @@ const Projects = () => {
                     <span className="project-year">{project.year}</span>
                   </div>
                 </div>
+                <span className="ripple" />
               </div>
             </Link>
           ))}

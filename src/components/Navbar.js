@@ -88,6 +88,15 @@ const Navbar = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a
+              href="/login"
+              onClick={() => setIsMenuOpen(false)}
+              style={{ color: '#ffd700', fontWeight: 700 }}
+            >
+              Log In
+            </a>
+          </li>
         </ul>
         {/* CTA Button removed as requested */}
       </div>
