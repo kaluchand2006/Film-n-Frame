@@ -54,7 +54,7 @@ const HeroSection = () => {
             WebkitTextFillColor: 'transparent',
             textShadow: '0 2px 12px #fff8f0, 0 1px 0 #a05a2c'
           }}>
-            Flims n Frame
+            Flute n Frame
           </span>
         </h1>
         <p className="hero-tagline" style={{

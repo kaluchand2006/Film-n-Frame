@@ -15,7 +15,7 @@ const Contact = () => {
             <h3>Get In Touch</h3>
             <div className="contact-item">
               <strong>Email:</strong>
-              <p>Flimsnframe@gmail.com</p>
+              <p>Flutenframe@gmail.com</p>
             </div>
             <div className="contact-item">
               <strong>Phone:</strong>

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Films n Frame</h3>
+            <h3>Flute n Frame</h3>
             <p>Creating cinematic experiences that inspire and captivate audiences worldwide.</p>
           </div>
           
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Films n Frame. All rights reserved.</p>
+          <p>&copy; {currentYear} Flute n Frame. All rights reserved.</p>
         </div>
       </div>
     </footer>

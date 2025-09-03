@@ -38,7 +38,7 @@ const About = () => {
         <div className="about-content" style={{ animation: 'fadeInRight 1.2s' }}>
           <h2 className="about-title-gradient">About Us</h2>
           <p className="about-description">
-            <b>Films n Frame</b> is dedicated to producing high-quality films that tell compelling stories and captivate audiences worldwide. With years of experience in the industry, we bring creativity, passion, and technical excellence to every project we undertake.
+            <b>Flute n Frame</b> is dedicated to producing high-quality films that tell compelling stories and captivate audiences worldwide. With years of experience in the industry, we bring creativity, passion, and technical excellence to every project we undertake.
           </p>
           <div className="about-highlights">
             {[
