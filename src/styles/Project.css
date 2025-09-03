@@ -1,5 +1,5 @@
 .projects {
-  background-color: #111;
+  background-color: #f8f5f2;
   padding: 6rem 0;
   display: flex;
   flex-direction: column;
@@ -24,10 +24,10 @@
 }
 
 .project-card {
-  background: rgba(30, 30, 60, 0.22);
-  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
-  border-radius: 1.2rem;
-  border: 2.5px solid rgba(255,255,255,0.08);
+  background: linear-gradient(120deg, #fff8f0 60%, #e7c8a0 100%) !important;
+  box-shadow: 0 4px 32px #e7c8a088, 0 0 18px #7c4f2c22;
+  border: 2.5px solid #e7c8a0;
+  color: #7c4f2c;
   transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
   position: relative;
   overflow: hidden;
@@ -44,7 +44,7 @@
 
 .project-card:hover {
   transform: translateY(-8px) scale(1.04);
-  box-shadow: 0 8px 40px rgba(123,47,242,0.18), 0 0 18px rgba(255,215,0,0.18);
+  box-shadow: 0 8px 40px #e7c8a0cc, 0 0 18px #ffd70044;
   border: 2.5px solid #ffd700;
 }
 
@@ -186,12 +186,13 @@
 }
 
 .project-year {
-  background: #333;
-  color: #bfa14b;
+  background: #fff8f0;
+  color: #a05a2c !important;
   padding: 4px 12px;
   border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 600;
+  border: 1.5px solid #e7c8a0;
 }
 
 /* Pulse Animation */
@@ -215,6 +216,7 @@
   }
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
   .project-card {
     max-width: 100%;
@@ -231,6 +233,7 @@
     grid-template-columns: 1fr;
     gap: 1.2rem;
     margin-top: 2rem;
+    justify-items: center;
   }
   .project-card {
     max-width: 100%;
@@ -250,4 +253,56 @@
   .project-content h3 {
     font-size: 1.2rem;
   }
+}
+
+body.dark-mode .projects {
+  background-color: #0a0a0a !important;
+}
+body.dark-mode .project-card {
+  background: rgba(30, 30, 60, 0.35) !important;
+  box-shadow: 0 8px 32px #ffd70044, 0 0 18px #7b2ff288 !important;
+  border: 2.5px solid #ffd70044 !important;
+}
+body.dark-mode .project-card h3, body.dark-mode .project-card .project-category, body.dark-mode .project-card .project-year {
+  color: #ffd700 !important;
+  text-shadow: 0 2px 8px #181828, 0 1px 0 #181828;
+}
+body.dark-mode .project-card p {
+  color: #ffd700 !important;
+  text-shadow: 0 1px 0 #181828;
+}
+
+/* --- Warm, Creamy Project Card Styles for Light Mode --- */
+.project-card {
+  background: linear-gradient(120deg, #fff8f0 60%, #e7c8a0 100%) !important;
+  box-shadow: 0 4px 32px #e7c8a088, 0 0 18px #7c4f2c22;
+  border: 2.5px solid #e7c8a0;
+  color: #7c4f2c;
+}
+.project-card h3, .project-card .project-category, .project-card .project-year {
+  color: #7c4f2c !important;
+  text-shadow: 0 2px 8px #fff8f0, 0 1px 0 #fff;
+}
+.project-card p {
+  color: #4e2e1e !important;
+  text-shadow: 0 1px 0 #fff8f0;
+}
+.project-card .project-year {
+  background: #fff8f0;
+  color: #a05a2c !important;
+  border: 1.5px solid #e7c8a0;
+}
+.project-card .project-placeholder {
+  background: linear-gradient(120deg, #e7c8a0 60%, #fff8f0 100%);
+  color: #a05a2c;
+}
+.project-card:hover {
+  box-shadow: 0 8px 40px #e7c8a0cc, 0 0 18px #ffd70044;
+  border: 2.5px solid #ffd700;
+}
+
+/* Fix for Work Section Text Visibility */
+.projects h2, .projects p, .projects .project-card h3, .projects .project-card p {
+  color: #7c4f2c !important;
+  text-shadow: 0 2px 8px #fff8f0, 0 1px 0 #fff;
 }

@@ -8,11 +8,12 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #111;
-  color: #f5f5f5;
+  background-color: #f8f5f2;
+  color: #4e2e1e;
   line-height: 1.6;
   font-size: 16px;
   font-weight: 400;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Dark Mode Styles */
@@ -23,10 +24,12 @@ body.dark-mode {
 
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
   color: #ffd700 !important;
+  text-shadow: 0 2px 8px #181828, 0 1px 0 #181828;
 }
 
-body.dark-mode p, body.dark-mode .text-center, body.dark-mode .text-left {
-  color: #e0e0e0 !important;
+body.dark-mode p, body.dark-mode .text-center, body.dark-mode .text-left, body.dark-mode label, body.dark-mode span, body.dark-mode li, body.dark-mode .feature-item div {
+  color: #ffd700 !important;
+  text-shadow: 0 1px 0 #181828;
 }
 
 body.dark-mode section, body.dark-mode .container {
@@ -62,6 +65,46 @@ body.dark-mode .footer {
 body.dark-mode .chatbot-window {
   background: rgba(30,30,60,0.98) !important;
   color: #ffd700 !important;
+}
+
+/* Light mode brown accent styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #7c4f2c;
+  text-shadow: 0 2px 8px #fff8f0, 0 1px 0 #fff;
+}
+
+a, .cta-premium, .cta-button, .secondary-button {
+  color: #fff;
+  background: linear-gradient(90deg, #bfa14b 60%, #7c4f2c 100%);
+}
+
+section, .container {
+  background: #f8f5f2;
+  color: #4e2e1e;
+}
+
+.glass-card,
+.project-card,
+.hero-content,
+.about-section,
+.showreel-section,
+.video-testimonials-section {
+  background: rgba(245, 230, 200, 0.7);
+  box-shadow: 0 8px 32px #bfa14b44, 0 0 18px #7c4f2c22;
+  color: #4e2e1e;
+}
+
+.navbar, .footer {
+  background: #fff8f0;
+  color: #7c4f2c;
+}
+
+.login-title-gradient {
+  background: linear-gradient(90deg, #bfa14b 30%, #7c4f2c 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-emphasis-color: transparent;
 }
 
 /* Improved Typography System */
@@ -107,6 +150,30 @@ section {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* --- Alignment Tweaks for Consistency --- */
+section, .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure all main sections are centered and consistent */
+.hero, .about-section, .projects, .showreel-section, .video-testimonials-section, .contact-section {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive container width for all sections */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 /* Container for content consistency */

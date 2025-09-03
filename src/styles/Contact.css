@@ -2,8 +2,7 @@
    Contact Section – Royal & Luxury Style
    ======================================== */
 .contact {
-  background-color: #111; /* darker for elegance */
-  padding: 5rem 0;
+  background: linear-gradient(120deg, #fff8f0 60%, #e7c8a0 100%);
 }
 
 .contact .container {
@@ -16,15 +15,20 @@
 .contact-info {
   text-align: left;
   padding: 2rem;
+  background: rgba(255, 248, 240, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 32px #e7c8a088, 0 0 18px #7c4f2c22;
+  color: #7c4f2c;
 }
 
 .contact-info h3 {
-  color: #d4af37; /* royal gold */
+  color: #a05a2c !important;
   margin-bottom: 2rem;
   font-size: 2rem;
   letter-spacing: 1px;
   font-weight: 700;
   position: relative;
+  text-shadow: 0 2px 8px #fff8f0, 0 1px 0 #fff;
 }
 
 .contact-info h3::after {
@@ -46,13 +50,18 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  text-shadow: 0 2px 8px #fff8f0, 0 1px 0 #fff;
+}
+
+.contact-info p, .contact-item p {
+  color: #4e2e1e !important;
+  text-shadow: 0 1px 0 #fff8f0;
 }
 
 .contact-item p {
   margin: 0;
-  color: #ccc;
-  font-size: 1rem;
-  line-height: 1.5;
+  color: #4e2e1e !important;
+  text-shadow: 0 1px 0 #fff8f0;
 }
 
 /* Form Section */
@@ -60,7 +69,7 @@
   background: #1b1b1b;
   padding: 2.5rem;
   border-radius: 12px;
-  border: 1px solid #333;
+  border: 2px solid #e7c8a0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
@@ -91,10 +100,10 @@
 .form-group textarea {
   width: 100%;
   padding: 14px 18px;
-  background: #2a2a2a;
-  border: 1px solid #444;
+  background: #fff8f0;
+  color: #7c4f2c;
+  border: 1.5px solid #e7c8a0;
   border-radius: 8px;
-  color: #fff;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -102,13 +111,13 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #d4af37;
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25);
+  border-color: #a05a2c;
+  box-shadow: 0 0 0 3px #e7c8a044;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #888;
+  color: #bfa14b;
 }
 
 .form-group textarea {
@@ -120,6 +129,18 @@
 .contact-form .cta-button {
   width: 100%;
   margin-top: 1rem;
+  background: linear-gradient(90deg, #ffd700 0%, #a05a2c 100%);
+  color: #fff8f0;
+  font-weight: 700;
+  border-radius: 30px;
+  box-shadow: 0 4px 16px #e7c8a0;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 /* Responsive Design */
@@ -138,4 +159,34 @@
   .contact-item {
     margin-bottom: 1.5rem;
   }
+}
+
+body.dark-mode .contact, body.dark-mode .contact-info, body.dark-mode .contact-form {
+  background: rgba(30,30,60,0.35) !important;
+  color: #ffd700 !important;
+  box-shadow: 0 8px 32px #ffd70044, 0 0 18px #7b2ff288 !important;
+}
+body.dark-mode .contact-info h3, body.dark-mode .contact-info strong {
+  color: #ffd700 !important;
+  text-shadow: 0 2px 8px #181828, 0 1px 0 #181828;
+}
+body.dark-mode .contact-info p, body.dark-mode .contact-item p {
+  color: #ffd700 !important;
+  text-shadow: 0 1px 0 #181828;
+}
+body.dark-mode .contact-form input, body.dark-mode .contact-form textarea {
+  background: #181828;
+  color: #ffd700;
+  border: 1.5px solid #ffd70044;
+}
+body.dark-mode .contact-form input:focus, body.dark-mode .contact-form textarea:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 0 3px #ffd70044;
+}
+body.dark-mode .contact-form input::placeholder, body.dark-mode .contact-form textarea::placeholder {
+  color: #ffd70099;
+}
+body.dark-mode .contact-form .cta-button {
+  background: linear-gradient(90deg, #ffd700 60%, #7b2ff2 100%) !important;
+  color: #181828 !important;
 }
